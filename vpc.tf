@@ -68,7 +68,7 @@ resource "aws_subnet" "database" {
   cidr_block = var.database_subnet_cidrs[count.index]
   
   availability_zone = local.az_names[count.index]
-  map_public_ip_on_launch = true
+  
 
   tags = merge(
     var.database_subnet_tags,
